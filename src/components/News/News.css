@@ -1,0 +1,12 @@
+.news{
+    height: 200vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+}
+
+.news h1{
+    color: red;
+    z-index: -2;
+}
