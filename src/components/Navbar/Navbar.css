@@ -1,4 +1,4 @@
-nav {
+.nav {
   z-index: 3;
   background: transparent;
   display: flex;
@@ -44,9 +44,39 @@ nav .logo {
   font-weight: 500;
 }
 .nav-list li a:hover {
+  color: rgb(255, 255, 255);
   background: var(--cc-blue);
   border-radius: 20px;
 }
+
+.newnav {
+  z-index: 3;
+  display: none;
+  background-color: white;
+  box-shadow: none;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1s;
+  width: 100%;
+  height: 50px;
+  padding: 12.5px 0;
+  transition: all 1s;
+  top: 0;
+}
+.mobilelogo {
+  display: none;
+  z-index: 4;
+  font-size: 1.5em;
+  align-self: flex-start;
+  position: relative;
+  margin-left: 7px;
+  color: var(--cc-blue);
+  margin: 0;
+}
+/* .active{
+  color: white; 
+} */
 
 #burger {
   display: none;
@@ -74,22 +104,7 @@ nav .logo {
   transition: all 0.3s linear;
 }
 
-/* .mobilenav {
-  display: none;
-  width: 100%;
-  position: absolute;
-  top: 31px;
-  transform: translateY(-145%);
-  background-color: white;
-  height: fit-content;
-  list-style: none;
-  padding-left: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transition: all 1s;
-  z-index: 2;
-} */
-.mobilenav{
+.mobilenav {
   display: none;
   width: 100%;
   position: absolute;
@@ -110,7 +125,6 @@ nav .logo {
   transition: all 1s;
 }
 
-
 .mobilenav-item {
   text-decoration: none;
   color: var(--cc-blue);
@@ -121,15 +135,13 @@ nav .logo {
   padding-left: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
-} 
+}
 .mobilenav-item:hover {
   color: black;
 }
 
-
-
 @media (max-width: 1008px) {
-  nav {
+  .nav {
     flex-direction: column;
     padding-bottom: 8px;
   }
@@ -138,42 +150,51 @@ nav .logo {
   .nav-list li a {
     font-size: 0.6em;
   }
-  nav .logo {
+  .nav .logo {
     font-size: 1.5em;
     position: initial;
   }
 }
 @media (max-width: 655px) {
-  nav {
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 1s;
-  }
-  .nav-list {
+  .nav {
     display: none;
   }
-  nav .logo {
+  .newnav {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobilelogo {
+    display: revert;
+    margin-left: 7px;
+  }
+  /* .nav-list {
+    display: none;
+  }
+  .nav .logo {
+    display: none;
     align-self: flex-start;
     position: relative;
     color: var(--cc-blue);
-  }
+  } */
   #burger {
     display: revert;
   }
   .layer {
     border-color: black;
+    /* margin: 8px;
+    width: 26px; */
   }
-  .mobilenav{
+  .mobilenav {
     display: initial;
   }
 }
 @media (max-width: 450px) {
   .layer {
     border-width: 1px;
+    margin: 8px;
+    width: 26px;
   }
   #burger {
-    top: 12.5px;
+    top: 7.5px;
   }
 }

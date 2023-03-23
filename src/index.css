@@ -1,11 +1,5 @@
 *{
     box-sizing: border-box;
-    --text-color: #29324b;
-    --cc-blue: #4638D2;
-    --cc-dark-heading: #29324b;
-    --cc-green: #48e1b4;
-    --cc-light-gray: #f7f7fc;
-    --cc-neon-green: #00ff60;
-    --cc-orange: #f6aa20;
-    --base-padding: 15px;
+    --cc-blue: rgb(70, 56, 210);
+ 
 }

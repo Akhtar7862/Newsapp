@@ -1,0 +1,24 @@
+.loader {
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+#loader {
+  font-size: 4em;
+  color: var(--cc-blue);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 316px) {
+   #loader{
+    font-size:3em ;
+   }
+  }
+@media (max-width: 203px) {
+   #loader{
+    font-size:2em ;
+   }
+  }
